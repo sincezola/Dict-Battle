@@ -1,0 +1,11 @@
+#
+
+int iHostBattle()
+{
+
+}
+
+int iJoinBattle()
+{
+
+}
