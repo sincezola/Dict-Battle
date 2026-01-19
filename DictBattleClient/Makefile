@@ -44,7 +44,10 @@ OBJS = \
 	$(OBJ_DIR)/trace.o \
 	$(OBJ_DIR)/sys_interface.o \
 	$(OBJ_DIR)/terminal_utils.o \
-	$(OBJ_DIR)/multiplayer.o
+	$(OBJ_DIR)/multiplayer.o \
+	$(OBJ_DIR)/sockets.o \
+	$(OBJ_DIR)/player.o \
+	$(OBJ_DIR)/utils.o
 
 all: clean directories $(BIN_DIR)/$(DICT_EXEC)
 
@@ -52,7 +55,7 @@ clean:
 	rm -rf $(OBJ_DIR) $(BIN_DIR) $(LOG_DIR)
 
 directories:
-	@mkdir -p $(OBJ_DIR) $(BIN_DIR)
+	@mkdir -p $(OBJ_DIR) $(BIN_DIR) $(LOG_DIR)
 
 $(BIN_DIR)/$(DICT_EXEC): directories $(OBJS)
 	$(CC) $(LDOPT) $(INC_DIR) -o $@ $(OBJS) $(LIBS)

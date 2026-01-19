@@ -1,3 +1,6 @@
 DictBattleClient/obj
 DictBattleClient/bin
 DictBattleClient/log
+DictBattleClient/src/.clangd
+
+.vscode

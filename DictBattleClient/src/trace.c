@@ -1,17 +1,18 @@
 #include <stdlib.h>
-#include <trace.h>
 #include <unistd.h>
-#include <sys_interface.h>
+#include "trace.h"
+#include "sys_interface.h"
 
 #ifdef LINUX
   #include <sys/time.h>
   #include <sys/types.h>
-#else
-  #include <process.h>
-  struct timeval {
-    long tv_sec;
-    long tv_usec;
-  };
+//#else
+  // #include <process.h>
+  
+  // struct timeval {
+  //   long tv_sec;
+  //   long tv_usec;
+  // };
 #endif
 
 char szRootPathFromBin[_MAX_PATH];
@@ -175,7 +176,7 @@ void _vTraceVarArgs(const char *kpszModuleName, const int kiLine, const char *kp
 
 void vSetLogFileTitle(void) {
   memset(gszTraceFile, 0, sizeof(gszTraceFile));
-  sprintf(gszTraceFile, "%s", "bombpartyclient.log");
+  sprintf(gszTraceFile, "%s", "dictbattle.log");
 }
 
 void vInitLogs(void) {

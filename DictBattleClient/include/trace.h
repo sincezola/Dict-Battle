@@ -1,7 +1,3 @@
-/**
- * trace.h
- */
-
 #ifndef _TRACE_H_
 #define _TRACE_H_
 
@@ -13,18 +9,18 @@
 #include <errno.h>
 #include <stdarg.h>
 #include <stdio.h>
-#include <sys_interface.h>
+#include "sys_interface.h"
 
 #ifdef _WIN32
-#include <process.h>
-#include <time.h>
-#include <windows.h>
+  #include <process.h>
+  #include <time.h>
+  #include <windows.h>
 #elif defined(LINUX)
-#include <sys/time.h>
-#include <time.h>
-#include <unistd.h>
+  #include <sys/time.h>
+  #include <time.h>
+  #include <unistd.h>
 #else
-#include <time.h>
+  #include <time.h>
 #endif
 
 /******************************************************************************

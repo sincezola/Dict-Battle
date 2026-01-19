@@ -28,7 +28,7 @@
 #define _MAX_PATH MAX_PATH
 #endif
 
-#else // ======= LINUX / UNIX ========
+#else
 
 #ifndef PATH_MAX
 #define PATH_MAX 4096
@@ -84,5 +84,4 @@ int iDIR_IsDir(char *szDir);
 int iOpenFile(FILE **fppFile, const char *kpszFileName, const char *kpszMode);
 int iCloseFile(FILE **fppFile);
 int iFileExist(const char *kpszFileName);
-
 #endif

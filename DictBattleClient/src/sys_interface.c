@@ -1,8 +1,11 @@
+#include "config.h"
+#include "sockets.h"
+#include "sys_interface.h"
+#include <stdint.h>
 #include <stdio.h>
-#include <config.h>
+#include <stdlib.h>
 #include <string.h>
-#include <sys_interface.h>
-
+  
 #ifdef _WIN32
   #include <stdint.h>
   #include <stdlib.h>
@@ -10,8 +13,6 @@
   #include <windows.h>
 #else
   #include <libgen.h>
-  #include <stdint.h>
-  #include <stdlib.h>
   #include <sys/stat.h>
   #include <unistd.h>
 #endif

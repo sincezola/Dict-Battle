@@ -1,1 +1,1 @@
-make LINUX=1_ll all
+make LINUX=1 all
